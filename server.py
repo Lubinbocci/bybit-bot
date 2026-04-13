@@ -50,11 +50,13 @@ def log(level, msg):
 
 def get_session():
     if not PYBIT_OK: return None
-    return BybitHTTP(
-        testnet=CONFIG["testnet"],
-        api_key=CONFIG["api_key"],
-        api_secret=CONFIG["api_secret"],
-    )
+   return BybitHTTP(
+    testnet=CONFIG["testnet"],
+    api_key=CONFIG["api_key"],
+    api_secret=CONFIG["api_secret"],
+    recv_window=10000,
+    timestamp_adjust=0,
+)
 
 def get_balance():
     try:
