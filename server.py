@@ -1,4 +1,3 @@
-cat ~/Downloads/bot/server.py
 """
 BYBIT FUTURES BOT - Pour deploiement sur Render
 ================================================
@@ -328,4 +327,3 @@ if __name__=="__main__":
     print(f"Bot demarre sur port {PORT}")
     try: server.serve_forever()
     except KeyboardInterrupt: print("Arrete.")
-      
